@@ -1,3 +1,4 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:widgetx/widgetx.dart';
@@ -15,6 +16,7 @@ class TextFieldX extends StatelessWidget {
   final FocusNode? node;
   final Function(String)? onChanged;
   final bool center;
+  final TextInputAction action;
 
   TextFieldX({
     this.onChanged,
@@ -29,6 +31,7 @@ class TextFieldX extends StatelessWidget {
     this.autofillHints,
     this.node,
     this.center = false,
+    this.action = TextInputAction.done,
   });
 
   @override
@@ -62,6 +65,7 @@ class TextFieldX extends StatelessWidget {
       keyboardType: inputType,
       enabled: enabled,
       textCapitalization: capitalization,
+      textInputAction: TextInputAction.next,
       autofillHints: autofillHints != null ? [autofillHints!] : null,
       textAlign: center ? TextAlign.center : TextAlign.start,
       style: TextStyle(color: ColorX.get(context, ColorXType.TEXT)),
