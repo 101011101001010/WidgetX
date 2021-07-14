@@ -20,7 +20,7 @@ class ColorX {
 
   static Color get(final BuildContext context, final ColorXType type) {
     final isLight = MediaQuery.of(context).platformBrightness == Brightness.light;
-    Colors.greenAccent
+
     switch (type) {
       case ColorXType.PRIMARY:
         return isLight ? primaryL : primaryD;
