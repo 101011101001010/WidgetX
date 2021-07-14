@@ -6,9 +6,10 @@ import 'package:widgetx/widgetx.dart';
 class ModalContainerX extends StatelessWidget {
   final Widget child;
   final double padding;
+  final double? width;
   final double? height;
   final bool opaque;
-  ModalContainerX({required this.child, this.padding = 0, this.height, this.opaque = false});
+  ModalContainerX({required this.child, this.padding = 0, this.width, this.height, this.opaque = false});
 
   @override
   Widget build(BuildContext context) {
@@ -16,7 +17,7 @@ class ModalContainerX extends StatelessWidget {
     final height = this.height != null ? size.height * this.height! : null;
     final color = ColorX.get(context, opaque ? ColorXType.PRIMARY : ColorXType.CARD).withOpacity(opaque ? 1.0 : 0.8);
     Widget child = this.child;
-    child = Container(padding: EdgeInsets.all(padding), width: size.width, height: height, child: child, color: color);
+    child = Container(padding: EdgeInsets.all(padding), width: this.width ?? size.width, height: height, child: child, color: color);
     child = ClipRect(child: BackdropFilter(filter: ImageFilter.blur(sigmaX: 16, sigmaY: 16), child: child));
     return child;
   }
