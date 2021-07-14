@@ -17,4 +17,6 @@ export 'constant/values.dart';
 export 'custom/elevation.dart';
 export 'custom/placeholder_widget.dart';
 export 'dialog/dialog.dart';
+export 'dialog/dialog_functions.dart';
 export 'modal/modal.dart';
+export 'modal/modal_functions.dart';
