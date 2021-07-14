@@ -14,13 +14,13 @@ class ColorX {
   static final Color textL = Color(0xFF000000);
   static final Color textD = Color(0xFFFFFFFF);
   static final Color accent = Color(0xFF2962FF);
-  static final Color positive = Color(0xFF00C853);
-  static final Color negative = Color(0xFFD50000);
+  static final Color positive = Color(0xFF00E676);
+  static final Color negative = Color(0xFFFF1744);
   static final Color caption = Color(0xFF888888);
 
   static Color get(final BuildContext context, final ColorXType type) {
     final isLight = MediaQuery.of(context).platformBrightness == Brightness.light;
-
+    Colors.greenAccent
     switch (type) {
       case ColorXType.PRIMARY:
         return isLight ? primaryL : primaryD;
