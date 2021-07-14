@@ -2,7 +2,7 @@ import 'dart:ui';
 
 import 'package:flutter/material.dart';
 
-enum ColorXType { PRIMARY, CARD, DIVIDER, TEXT }
+enum ColorXType { PRIMARY, CARD, DIVIDER, TEXT, TEXT_INV }
 
 class ColorX {
   static final Color primaryL = Color(0xFFF8F8F8);
@@ -30,6 +30,8 @@ class ColorX {
         return isLight ? dividerL : dividerD;
       case ColorXType.TEXT:
         return isLight ? textL : textD;
+      case ColorXType.TEXT_INV:
+        return isLight ? textD : textL;
     }
   }
 }
