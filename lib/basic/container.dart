@@ -13,7 +13,7 @@ class ContainerX extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final size = MediaQuery.of(context).size;
-    final border = Border.all(color: ColorX.get(context, ColorXType.DIVIDER));
+    final border = Border.all(color: ColorX.get(context, ColorXType.DIVIDER), width: 0.5);
     final radius = rounded ? BorderRadius.all(Radius.circular(RADIUS)) : BorderRadius.zero;
     final decoration = BoxDecoration(borderRadius: radius, border: bordered ? border : null, color: color);
     return Container(child: child, decoration: decoration, width: width ?? size.width, height: height);
