@@ -77,7 +77,8 @@ class IconButtonX extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final child = GestureDetector(onTap: onPressed, child: icon);
+    Widget child = GestureDetector(onTap: onPressed, child: icon);
+    child = MouseRegion(cursor: SystemMouseCursors.click, child: child);
     final pad = PAD34;
     return nav ? Pad(child, h: pad) : Pad(child, l: pad);
   }
