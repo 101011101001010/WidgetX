@@ -1,3 +1,4 @@
+import 'package:flutter/foundation.dart' show kIsWeb;
 import 'package:flutter/material.dart';
 import 'package:widgetx/widgetx.dart';
 
@@ -29,7 +30,7 @@ class ButtonX extends StatelessWidget {
           this.leading!,
           SizedBox(width: hPad),
           Expanded(child: Center(child: text)),
-          SizedBox(width: hPad + ICON_SIZE),
+          SizedBox(width: hPad + (kIsWeb ? ICON_SIZE_WEB : ICON_SIZE)),
         ]);
       } else {
         hPad = PAD1 * 1.25;

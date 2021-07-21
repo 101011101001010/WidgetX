@@ -1,6 +1,9 @@
 const double FONT_SIZE = 16.0;
 const double FONT_SIZE_HEADER = 18.0;
 const double FONT_SIZE_TITLE = 22.0;
+const double FONT_SIZE_WEB = 14.0;
+const double FONT_SIZE_HEADER_WEB = 16.0;
+const double FONT_SIZE_TITLE_WEB = 20.0;
 
 const double PAD14 = 4.0;
 const double PAD12 = 8.0;
@@ -13,3 +16,4 @@ const double PAD4 = 64.0;
 const double ELEVATION = 1.0;
 const double RADIUS = 8.0;
 const double ICON_SIZE = 28.0;
+const double ICON_SIZE_WEB = 24.0;

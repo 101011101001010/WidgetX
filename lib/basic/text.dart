@@ -1,3 +1,4 @@
+import 'package:flutter/foundation.dart' show kIsWeb;
 import 'package:flutter/material.dart';
 import 'package:widgetx/widgetx.dart';
 
@@ -14,7 +15,7 @@ class TextX extends StatelessWidget {
   TextX(
     this.text, {
     this.color,
-    this.size = FONT_SIZE,
+    this.size = kIsWeb ? FONT_SIZE_WEB : FONT_SIZE,
     this.weight = FontWeight.w400,
     this.letterSpacing,
     this.height,
@@ -51,7 +52,7 @@ class TitleX extends TextX {
       : super(
           text,
           color: color,
-          size: FONT_SIZE_TITLE,
+          size: kIsWeb ? FONT_SIZE_TITLE_WEB : FONT_SIZE_TITLE,
           weight: FontWeight.w600,
           align: align,
           letterSpacing: letterSpacing,
@@ -68,7 +69,7 @@ class HeaderX extends TextX {
       : super(
           text,
           color: color,
-          size: FONT_SIZE_HEADER,
+          size: kIsWeb ? FONT_SIZE_HEADER_WEB : FONT_SIZE_HEADER,
           weight: bold ? FontWeight.w600 : FontWeight.w400,
           align: align,
         );
@@ -114,7 +115,7 @@ class CaptionX extends TextX {
       : super(
           text,
           color: ColorX.caption,
-          size: FONT_SIZE - 1,
+          size: (kIsWeb ? FONT_SIZE_WEB : FONT_SIZE) - 1,
           align: align,
         );
 }
@@ -130,7 +131,7 @@ class ListTextX extends StatelessWidget {
     return TextX(
       text,
       color: color,
-      size: FONT_SIZE_HEADER,
+      size: kIsWeb ? FONT_SIZE_HEADER_WEB : FONT_SIZE_HEADER,
       align: align,
     );
   }

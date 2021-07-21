@@ -1,3 +1,4 @@
+import 'package:flutter/foundation.dart' show kIsWeb;
 import 'package:flutter/material.dart';
 import 'package:widgetx/widgetx.dart';
 
@@ -5,7 +6,7 @@ class IconX extends StatelessWidget {
   final IconData icon;
   final Color? color;
   final double size;
-  IconX(this.icon, {this.color, this.size = ICON_SIZE});
+  IconX(this.icon, {this.color, this.size = (kIsWeb ? ICON_SIZE_WEB : ICON_SIZE)});
 
   @override
   Widget build(BuildContext context) {
