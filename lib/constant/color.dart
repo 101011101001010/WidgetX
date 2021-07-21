@@ -10,7 +10,7 @@ class ColorX {
   static final Color cardL = Color(0xFFFFFFFF);
   static final Color cardD = Color(0xFF181818);
   static final Color dividerL = Color(0xFFBBBBBB);
-  static final Color dividerD = Color(0xFF444444);
+  static final Color dividerD = Color(0xFF888888);
   static final Color textL = Color(0xFF000000);
   static final Color textD = Color(0xFFFFFFFF);
   static final Color accent = Color(0xFF2962FF);
