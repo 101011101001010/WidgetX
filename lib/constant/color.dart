@@ -1,6 +1,7 @@
 import 'dart:ui';
 
 import 'package:flutter/material.dart';
+import 'package:widgetx/basic/app.dart';
 
 enum ColorXType { PRIMARY, CARD, DIVIDER, TEXT, TEXT_INV }
 
@@ -19,7 +20,19 @@ class ColorX {
   static final Color caption = Color(0xFF888888);
 
   static Color get(final BuildContext context, final ColorXType type) {
-    final isLight = MediaQuery.of(context).platformBrightness == Brightness.light;
+    final themeMode = MaterialAppX.kThemeMode;
+    final isLight;
+
+    switch (themeMode) {
+      case ThemeMode.light:
+        isLight = true;
+        break;
+      case ThemeMode.dark:
+        isLight = false;
+        break;
+      default:
+        isLight = MediaQuery.of(context).platformBrightness == Brightness.light;
+    }
 
     switch (type) {
       case ColorXType.PRIMARY:
