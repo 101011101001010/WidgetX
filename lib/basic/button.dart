@@ -6,6 +6,7 @@ class ButtonX extends StatelessWidget {
   final Widget text;
   final Widget? leading;
   final Function()? onPressed;
+  final Function()? onLongPress;
   final Color? color;
   final bool fill;
 
@@ -13,6 +14,7 @@ class ButtonX extends StatelessWidget {
     required this.text,
     this.leading,
     this.onPressed,
+    this.onLongPress,
     this.color,
     this.fill = true,
   });
@@ -60,6 +62,7 @@ class ButtonX extends StatelessWidget {
     return ElevatedButton(
       child: child,
       onPressed: this.onPressed,
+      onLongPress: this.onLongPress,
       style: style,
     );
   }
