@@ -17,6 +17,7 @@ class TextFieldX extends StatelessWidget {
   final Function(String)? onChanged;
   final bool center;
   final TextInputAction action;
+  final Function(String?)? submitAction;
 
   TextFieldX({
     this.onChanged,
@@ -32,6 +33,7 @@ class TextFieldX extends StatelessWidget {
     this.node,
     this.center = false,
     this.action = TextInputAction.done,
+    this.submitAction,
   });
 
   @override
@@ -63,6 +65,7 @@ class TextFieldX extends StatelessWidget {
       decoration: decoration,
       maxLength: limit,
       keyboardType: inputType,
+      onSubmitted: submitAction,
       enabled: enabled,
       textCapitalization: capitalization,
       textInputAction: TextInputAction.next,
