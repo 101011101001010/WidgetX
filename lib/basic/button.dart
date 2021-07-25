@@ -143,3 +143,26 @@ class SquareButtonX extends StatelessWidget {
     );
   }
 }
+
+class TextButtonX extends StatelessWidget {
+  final String text;
+  final Color? color;
+  final Function()? onPressed;
+
+  TextButtonX({
+    required this.text,
+    this.color,
+    this.onPressed,
+  });
+
+  @override
+  Widget build(BuildContext context) {
+    return MouseRegion(
+      cursor: SystemMouseCursors.click,
+      child: GestureDetector(
+        onTap: onPressed,
+        child: ButtonTextX(text, color: color ?? ColorX.accent),
+      ),
+    );
+  }
+}
