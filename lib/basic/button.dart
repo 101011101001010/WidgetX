@@ -157,11 +157,19 @@ class TextButtonX extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final color;
+
+    if (onPressed == null) {
+      color = ColorX.caption;
+    } else {
+      color = this.color ?? ColorX.accent;
+    }
+
     return MouseRegion(
       cursor: SystemMouseCursors.click,
       child: GestureDetector(
         onTap: onPressed,
-        child: ButtonTextX(text, color: color ?? ColorX.accent),
+        child: ButtonTextX(text, color: color),
       ),
     );
   }
