@@ -68,6 +68,31 @@ class ButtonX extends StatelessWidget {
   }
 }
 
+class SButtonX extends StatelessWidget {
+  final String text;
+  final Function()? onPressed;
+  final Function()? onLongPress;
+  final Color? color;
+
+  SButtonX({
+    required this.text,
+    this.onPressed,
+    this.onLongPress,
+    this.color,
+  });
+
+  @override
+  Widget build(BuildContext context) {
+    return ButtonX(
+      text: ButtonTextX(text),
+      color: color,
+      onPressed: onPressed,
+      onLongPress: onLongPress,
+      fill: false,
+    );
+  }
+}
+
 class IconButtonX extends StatelessWidget {
   final Widget icon;
   final Function()? onPressed;
