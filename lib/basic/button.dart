@@ -35,11 +35,11 @@ class ButtonX extends StatelessWidget {
           SizedBox(width: hPad + (kIsWeb ? ICON_SIZE_WEB : ICON_SIZE)),
         ]);
       } else {
-        hPad = PAD1;
+        hPad = PAD1 * 1.25;
 
         child = Row(mainAxisSize: MainAxisSize.min, children: [
           this.leading!,
-          SizedBox(width: hPad),
+          SizedBox(width: PAD1),
           text,
         ]);
       }
