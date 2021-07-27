@@ -63,6 +63,7 @@ class ButtonX extends StatelessWidget {
       child: child,
       onPressed: this.onPressed,
       onLongPress: this.onLongPress,
+      autofocus: false,
       style: style,
     );
   }
