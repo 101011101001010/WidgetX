@@ -17,11 +17,11 @@ class DialogX extends StatelessWidget {
 
     switch (this.type) {
       case DXType.OK:
-        actions.add(TextButton(child: AccentTextX(buttonText1 ?? "OK"), onPressed: () => Navigator.of(context).pop()));
+        actions.add(TextButtonX(text: buttonText1 ?? "OK", onPressed: () => Navigator.of(context).pop()));
         break;
       case DXType.YES_NO:
-        actions.add(TextButton(child: AccentTextX(buttonText2 ?? "NO"), onPressed: () => Navigator.of(context).pop(false)));
-        actions.add(TextButton(child: AccentTextX(buttonText1 ?? "YES"), onPressed: () => Navigator.of(context).pop(true)));
+        actions.add(TextButtonX(text: buttonText2 ?? "NO", onPressed: () => Navigator.of(context).pop(false)));
+        actions.add(TextButtonX(text: buttonText1 ?? "YES", onPressed: () => Navigator.of(context).pop(true)));
         break;
     }
 
