@@ -17,11 +17,14 @@ class DialogX extends StatelessWidget {
 
     switch (this.type) {
       case DXType.OK:
-        actions.add(TextButtonX(text: buttonText1 ?? "OK", onPressed: () => Navigator.of(context).pop()));
+        final button = TextButtonX(text: buttonText1 ?? "OK", onPressed: () => Navigator.of(context).pop());
+        actions.add(Pad(button, r: PAD1, b: PAD1));
         break;
       case DXType.YES_NO:
-        actions.add(TextButtonX(text: buttonText2 ?? "NO", onPressed: () => Navigator.of(context).pop(false)));
-        actions.add(TextButtonX(text: buttonText1 ?? "YES", onPressed: () => Navigator.of(context).pop(true)));
+        final noButton = TextButtonX(text: buttonText2 ?? "NO", onPressed: () => Navigator.of(context).pop(false));
+        final yesButton = TextButtonX(text: buttonText1 ?? "YES", onPressed: () => Navigator.of(context).pop(true));
+        actions.add(Pad(noButton, r: PAD1, b: PAD1));
+        actions.add(Pad(yesButton, r: PAD1, b: PAD1));
         break;
     }
 
