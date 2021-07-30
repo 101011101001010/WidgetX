@@ -119,12 +119,14 @@ class FloatButtonX extends StatelessWidget {
   final Widget child;
   final Color? color;
   final Function()? onPressed;
+  final bool mini;
 
   FloatButtonX({
     required this.heroTag,
     required this.child,
     this.color,
     this.onPressed,
+    this.mini = false,
   });
 
   @override
@@ -136,6 +138,7 @@ class FloatButtonX extends StatelessWidget {
       heroTag: heroTag,
       backgroundColor: color,
       onPressed: onPressed,
+      mini: mini,
     );
   }
 }
